@@ -270,13 +270,25 @@ proyecto_mercagro/
 
 ## 👨‍💻 Autor
 
-**Julian Florez**
-Desarrollado como proyecto formativo del **Ministerio de las TIC de Colombia**
+**Julian Daniel Florez Guzman**
+C.C. 94558179
 
 [![GitHub](https://img.shields.io/badge/GitHub-julianDflorezG-181717?style=flat&logo=github)](https://github.com/julianDflorezG)
 
 ---
 
+## 🏅 Certificación
+
+Este proyecto fue desarrollado como trabajo final del bootcamp:
+
+> 🎓 **Programación Nivel Básico**
+> **Talento Tech — Ministerio de las TIC de Colombia**
+> Unión Temporal conformada por **Poliandino** y **Cendi**
+> 📅 Expedido el 20 de agosto de 2025
+> ⏱ Duración: **159 horas**
+
+---
+
 ## 📄 Licencia
 
-Este proyecto fue desarrollado con fines educativos en el marco del programa del Ministerio de las TIC de Colombia.
+Este proyecto fue desarrollado con fines educativos en el marco del programa **Talento Tech** del Ministerio de las TIC de Colombia.
