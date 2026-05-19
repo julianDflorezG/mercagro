@@ -1,0 +1,94 @@
+<h2>Detalle del Cultivo</h2>
+
+<div class="d-flex justify-content-between align-items-center mb-3">
+  <button class="btn btn-secondary btn-sm" onclick="history.back()">Atrás</button>
+  <div>
+    <button class="btn btn-primary btn-sm me-2" data-bs-toggle="modal" data-bs-target="#modalEditarCultivo">Editar</button>
+    <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modalEliminarCultivo">Eliminar</button>
+  </div>
+</div>
+
+<div class="card p-4">
+  <p><strong>ID:</strong> <span id="detalle-id"></span></p>
+  <p><strong>Producto:</strong> <span id="detalle-producto"></span></p>
+  <p><strong>Descripción:</strong> <span id="detalle-descripcion"></span></p>
+  <p><strong>Cantidad:</strong> <span id="detalle-cantidad"></span></p>
+  <p><strong>Unidad:</strong> <span id="detalle-unidad"></span></p>
+  <p><strong>Precio:</strong> $<span id="detalle-precio"></span></p>
+  <p><strong>Estado:</strong> <span id="detalle-estado"></span></p>
+  <p><strong>Fecha de creación:</strong> <span id="detalle-fecha"></span></p>
+  <p><strong>Imagen:</strong><br>
+    <img id="detalle-imagen" class="img-fluid border rounded mt-2" style="max-width: 300px;" alt="Imagen del cultivo" />
+  </p>
+</div>
+
+<!-- Modal Editar Cultivo -->
+<div class="modal fade" id="modalEditarCultivo" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="modalEditarCultivoLabel">
+  <div class="modal-dialog">
+    <form id="form-editar-cultivo" class="modal-content" enctype="multipart/form-data">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalEditarCultivoLabel">Editar Cultivo</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <input type="hidden" id="edit-id" />
+        <div class="mb-3">
+          <label for="edit-producto" class="form-label">Producto</label>
+          <input type="text" class="form-control" id="edit-producto" disabled />
+        </div>
+        <div class="mb-3">
+          <label for="edit-descripcion" class="form-label">Descripción</label>
+          <textarea class="form-control" id="edit-descripcion" required></textarea>
+        </div>
+        <div class="mb-3">
+          <label for="edit-cantidad" class="form-label">Cantidad</label>
+          <input type="number" class="form-control" id="edit-cantidad" required />
+        </div>
+        <div class="mb-3">
+          <label for="edit-unidad" class="form-label">Unidad de medida</label>
+          <input type="text" class="form-control" id="edit-unidad" required />
+        </div>
+        <div class="mb-3">
+          <label for="edit-precio" class="form-label">Precio</label>
+          <input type="number" class="form-control" id="edit-precio" required />
+        </div>
+        <div class="mb-3">
+          <label for="edit-estado" class="form-label">Estado</label>
+          <select class="form-select" id="edit-estado" required>
+            <option value="REGISTRO">Registro</option>
+            <option value="COSECHA">Cosecha</option>
+            <option value="PUBLICADO">Publicado</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="edit-imagen" class="form-label">Imagen (opcional)</label>
+          <input type="file" class="form-control" id="edit-imagen" accept="image/*" />
+        </div>
+        <div id="editar-cultivo-error" class="alert alert-danger d-none mt-2" role="alert"></div>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-success">Guardar cambios</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Modal Eliminar Cultivo -->
+<div class="modal fade" id="modalEliminarCultivo" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="modalEliminarCultivoLabel">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-danger text-white">
+        <h5 class="modal-title" id="modalEliminarCultivoLabel">Confirmar eliminación</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        ¿Estás seguro de que deseas eliminar este cultivo?
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-danger" id="btn-confirmar-eliminar">Sí, eliminar</button>
+        <button class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+      </div>
+    </div>
+  </div>
+</div>

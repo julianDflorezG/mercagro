@@ -1,0 +1,49 @@
+<h2 id="titulo-cultivos-comprador">Cultivos Disponibles</h2>
+
+<div id="publicados-error" class="alert alert-danger d-none" role="alert"></div>
+
+<div class="table-responsive">
+  <table class="table table-bordered table-hover" id="tabla-publicados" role="table" aria-labelledby="titulo-cultivos-comprador">
+    <thead class="table-light">
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Producto</th>
+        <th scope="col">Agricultor</th>
+        <th scope="col">Precio</th>
+        <th scope="col">Unidad</th>
+        <th scope="col">Cantidad</th>
+        <th scope="col">Estado</th>
+        <th scope="col">Acción</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- JS insertará aquí -->
+    </tbody>
+  </table>
+</div>
+
+<!-- Modal para crear solicitud -->
+<div class="modal fade" id="modalCrearSolicitud" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="modalCrearSolicitudLabel">
+  <div class="modal-dialog">
+    <form class="modal-content" id="form-crear-solicitud">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalCrearSolicitudLabel">Enviar Solicitud</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <input type="hidden" id="cultivo-id" />
+        <div class="mb-3">
+          <p><strong>Producto:</strong> <span id="solicitud-producto"></span></p>
+          <p><strong>Agricultor:</strong> <span id="solicitud-agricultor"></span></p>
+        </div>
+        <label for="mensaje-solicitud" class="form-label">Mensaje para el agricultor</label>
+        <textarea class="form-control" id="mensaje-solicitud" rows="3" required></textarea>
+        <div id="solicitud-error" class="alert alert-danger d-none mt-2" role="alert"></div>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-success">Enviar Solicitud</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+      </div>
+    </form>
+  </div>
+</div>

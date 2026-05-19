@@ -1,0 +1,38 @@
+<div class="d-flex align-items-center justify-content-center vh-100 w-100">
+  <div class="card shadow p-4" style="max-width: 400px; width: 100%;">
+
+    <h1 class="text-center mb-4" id="titulo-registro">Mercagro</h1>
+
+    <form id="registro-form" aria-labelledby="titulo-registro">
+      <div class="mb-3">
+        <label for="reg-nombre" class="form-label">Nombre completo</label>
+        <input type="text" class="form-control" id="reg-nombre" name="nombre" aria-required="true" required>
+      </div>
+      <div class="mb-3">
+        <label for="reg-nombre" class="form-label">Correo electrónico</label>
+        <input type="email" class="form-control" id="reg-email" name="email" aria-required="true" required>
+      </div>
+      <div class="mb-3">
+        <label for="reg-password" class="form-label">Contraseña</label>
+        <input type="password" class="form-control" id="reg-password" name="password" aria-required="true" required>
+      </div>
+      <div class="mb-3">
+        <label for="reg-rol" class="form-label">Rol</label>
+        <select class="form-select" id="reg-rol" name="rol" aria-required="true" required>
+            <option value="AGRICULTOR">Agricultor</option>
+            <option value="COMPRADOR">Comprador</option>
+        </select>
+      </div>
+ 
+      <div id="registro-error" class="text-danger mb-3 d-none" role="alert"></div>        
+      <div id="registro-exito" class="alert alert-success d-none" role="alert"></div> 
+             
+      <button type="submit" class="btn btn-success w-100" aria-label="Registrarse en Mercagro">Registrarse</button>
+    </form>
+
+    <div class="text-center mt-3">
+      <a href="#login" id="ir-a-login" aria-label="Ir al formulario de inicio de sesión">¿Ya tienes cuenta? Inicia sesión</a>
+    </div>
+
+  </div>
+</div>

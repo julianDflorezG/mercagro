@@ -1,0 +1,70 @@
+<h2>Detalle del Producto</h2>
+
+<div class="d-flex justify-content-between align-items-center mb-3">
+  <button class="btn btn-secondary btn-sm" onclick="history.back()">Atrás</button>
+  <div>
+    <button class="btn btn-primary btn-sm me-2" data-bs-toggle="modal" data-bs-target="#modalEditarProducto">Editar</button>
+    <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modalEliminarProducto">Eliminar</button>
+  </div>
+</div>
+
+<div class="card p-4">
+  <p><strong>ID:</strong> <span id="detalle-id"></span></p>
+  <p><strong>Nombre:</strong> <span id="detalle-nombre"></span></p>
+  <p><strong>Precio de Referencia:</strong> $<span id="detalle-precio"></span></p>
+  <p><strong>Unidad de Medida:</strong> <span id="detalle-unidad"></span></p>
+</div>
+
+<!-- Modal Editar -->
+<div class="modal fade" id="modalEditarProducto" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="modalEditarProductoLabel">
+  <div class="modal-dialog">
+    <form id="form-editar-producto" class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalEditarProductoLabel">Editar Producto</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <input type="hidden" id="edit-id" />
+
+        <div class="mb-3">
+          <label for="edit-nombre" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="edit-nombre" required />
+        </div>
+
+        <div class="mb-3">
+          <label for="edit-precio" class="form-label">Precio de referencia</label>
+          <input type="number" class="form-control" id="edit-precio" required />
+        </div>
+
+        <div class="mb-3">
+          <label for="edit-unidad" class="form-label">Unidad de medida</label>
+          <input type="text" class="form-control" id="edit-unidad" required />
+        </div>
+
+        <div id="editar-producto-error" class="alert alert-danger d-none mt-2" role="alert"></div>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-success">Guardar cambios</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Modal Eliminar -->
+<div class="modal fade" id="modalEliminarProducto" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="modalEliminarProductoLabel">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-danger text-white">
+        <h5 class="modal-title" id="modalEliminarProductoLabel">Confirmar eliminación</h5>
+      </div>
+      <div class="modal-body">
+        ¿Estás seguro de que deseas eliminar este producto?
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-danger" id="btn-confirmar-eliminar">Sí, eliminar</button>
+        <button class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+      </div>
+    </div>
+  </div>
+</div>

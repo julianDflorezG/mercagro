@@ -1,0 +1,71 @@
+<h2 id="titulo-cultivos-agricultor">Mis Cultivos</h2>
+
+<div id="cultivos-error" class="alert alert-danger d-none" role="alert"></div>
+
+<div class="text-end mb-3">
+  <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modalCrearCultivo">+ Nuevo Cultivo</button>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-bordered table-hover" id="tabla-cultivos" role="table" aria-labelledby="titulo-cultivos-agricultor">
+    <thead class="table-light">
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Producto</th>
+        <th scope="col">Cantidad</th>
+        <th scope="col">Unidad</th>
+        <th scope="col">Precio</th>
+        <th scope="col">Estado</th>
+        <th scope="col">Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- JS insertará aquí las filas -->
+    </tbody>
+  </table>
+</div>
+
+<!-- Modal Crear Cultivo -->
+<div class="modal fade" id="modalCrearCultivo" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="modalCrearCultivoLabel">
+  <div class="modal-dialog">
+    <form id="form-crear-cultivo" class="modal-content" enctype="multipart/form-data">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalCrearCultivoLabel">Crear Cultivo</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <label for="cultivo-producto" class="form-label">Producto</label>
+          <select id="cultivo-producto" class="form-select" required>
+            <option value="" disabled selected>Seleccionar producto</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="cultivo-descripcion" class="form-label">Descripción</label>
+          <textarea id="cultivo-descripcion" class="form-control" required></textarea>
+        </div>
+        <div class="mb-3">
+          <label for="cultivo-cantidad" class="form-label">Cantidad</label>
+          <input type="number" id="cultivo-cantidad" class="form-control" required />
+        </div>
+        <div class="mb-3">
+          <label for="cultivo-unidad" class="form-label">Unidad de Medida</label>
+          <input type="text" id="cultivo-unidad" class="form-control" required />
+        </div>
+        <div class="mb-3">
+          <label for="cultivo-precio" class="form-label">Precio</label>
+          <input type="number" id="cultivo-precio" class="form-control" required />
+        </div>
+        <div class="mb-3">
+          <label for="cultivo-imagen" class="form-label">Imagen</label>
+          <input type="file" id="cultivo-imagen" class="form-control" accept="image/*" required />
+        </div>
+        <div id="crear-cultivo-error" class="alert alert-danger d-none mt-2" role="alert"></div>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-success">Guardar</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+      </div>
+    </form>
+  </div>
+</div>

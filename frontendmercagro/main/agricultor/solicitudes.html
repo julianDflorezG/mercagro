@@ -1,0 +1,44 @@
+<h2 id="titulo-solicitudes-agricultor">Solicitudes Recibidas</h2>
+
+<div id="solicitudes-error" class="alert alert-danger d-none" role="alert"></div>
+
+<div class="table-responsive">
+  <table class="table table-bordered table-hover" id="tabla-solicitudes-agricultor" role="table" aria-labelledby="titulo-solicitudes-agricultor">
+    <thead class="table-light">
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Producto</th>
+        <th scope="col">Comprador</th>
+        <th scope="col">Mensaje</th>
+        <th scope="col">Estado</th>
+        <th scope="col">Fecha</th>
+        <th scope="col">Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- JS insertará aquí -->
+    </tbody>
+  </table>
+</div>
+
+<!-- Modal Cambiar Estado -->
+<div class="modal fade" id="modalCambiarEstado" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="modalCambiarEstadoLabel">
+  <div class="modal-dialog">
+    <form id="form-cambiar-estado" class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalCambiarEstadoLabel">Cambiar Estado</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <input type="hidden" id="estado-id" />
+        <label for="estado-nuevo" class="form-label">Nuevo Estado</label>
+        <select class="form-select" id="estado-nuevo" required aria-required="true"></select>
+        <div id="estado-error" class="alert alert-danger d-none mt-2" role="alert"></div>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-success">Guardar</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+      </div>
+    </form>
+  </div>
+</div>
